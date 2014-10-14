@@ -12,7 +12,7 @@
 		1、 把 src/main/resources/db.properties 拷贝到 CMS目录下
 		2、 修改db.properties里的超级管理员的email，和数据库连接的相关信息
 	# 安装
-	mvn exec:java -Dexec.mainClass="com.easycms.Install"
+	mvn exec:java -Dexec.mainClass="in.zamo.Install"
 	# 运行
 	mvn jetty:run
 	# 后台地址
