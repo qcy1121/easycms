@@ -1,8 +1,9 @@
-package com.easycms.service;
+package in.zamo.service;
+
+import in.zamo.model.Account;
 
 import java.util.List;
 
-import com.easycms.model.Account;
 /**
  * 
  * @author fuxin

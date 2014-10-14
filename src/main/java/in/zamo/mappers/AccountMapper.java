@@ -1,11 +1,12 @@
-package com.easycms.mappers;
+package in.zamo.mappers;
+
+import in.zamo.model.Account;
 
 import java.util.List;
 
 import org.apache.ibatis.annotations.*;
 import org.springframework.stereotype.Repository;
 
-import com.easycms.model.Account;
 
 /**
  * 

@@ -1,4 +1,8 @@
-package com.easycms.service.impl;
+package in.zamo.service.impl;
+
+import in.zamo.mappers.AccountMapper;
+import in.zamo.model.Account;
+import in.zamo.service.AccountService;
 
 import java.util.List;
 
@@ -7,9 +11,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.easycms.mappers.AccountMapper;
-import com.easycms.model.Account;
-import com.easycms.service.AccountService;
 
 @Service
 @Transactional

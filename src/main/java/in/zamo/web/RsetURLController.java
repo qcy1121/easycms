@@ -1,4 +1,4 @@
-package com.easycms.web;
+package in.zamo.web;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Service;

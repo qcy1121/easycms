@@ -2,16 +2,16 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<organization>
-		<name>moocss</name>
-		<url>http://moocss.com</url>
+		<name>chyee</name>
+		<url>http://www.zamo.in</url>
 	</organization>
-	<groupId>com.easycms</groupId>
+	<groupId>in.zamo</groupId>
 	<artifactId>easycms</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 
 	<name>EasyCMS Maven Webapp</name>
-	<url>http://easycms.moocss.com</url>
+	<url>http://www.zamo.in</url>
 
 	<!-- 开发人员信息 -->
 	<developers>

@@ -1,4 +1,4 @@
-package com.easycms;
+package in.zamo;
 
 import static org.junit.Assert.*;
 

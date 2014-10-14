@@ -1,4 +1,4 @@
-package com.easycms.model;
+package in.zamo.model;
 
 import java.io.Serializable;
 

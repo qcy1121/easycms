@@ -1,4 +1,7 @@
-package com.easycms.web;
+package in.zamo.web;
+
+import in.zamo.model.Account;
+import in.zamo.service.AccountService;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -9,8 +12,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.easycms.model.Account;
-import com.easycms.service.AccountService;
 
 @Controller(value="accountController")
 @RequestMapping("/account")

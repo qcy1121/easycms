@@ -1,6 +1,9 @@
-package com.easycms.service.impl;
+package in.zamo.service.impl;
 
 import static org.junit.Assert.*;
+
+import in.zamo.model.Account;
+import in.zamo.service.AccountService;
 
 import java.util.List;
 import org.junit.Test;
@@ -9,8 +12,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.easycms.model.Account;
-import com.easycms.service.AccountService;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = {"classpath*:applicationContext.xml"})

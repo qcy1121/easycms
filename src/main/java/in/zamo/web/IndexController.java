@@ -1,4 +1,6 @@
-package com.easycms.web;
+package in.zamo.web;
+import in.zamo.service.AccountService;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -9,7 +11,6 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.easycms.service.AccountService;
 
 @Controller
 public class IndexController{

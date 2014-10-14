@@ -1,4 +1,4 @@
-package com.easycms;
+package in.zamo;
 
 import java.io.BufferedInputStream;
 import java.io.Console;
