@@ -22,4 +22,4 @@
 	# 后台地址
 	http://127.0.0.1:8080/admin
 ****	
-copy form [thoughtbit/easycms](https://github.com/thoughtbit/easycms) , create by [moocss](https://github.com/moocss)
+Copied form [thoughtbit/easycms](https://github.com/thoughtbit/easycms) , created by [moocss](https://github.com/moocss)
