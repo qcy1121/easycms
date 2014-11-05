@@ -12,8 +12,9 @@ import java.util.List;
 public interface AccountService{
 
 	public void createAccount(Account account);
+	int deleteAccount(int id);
 	
-	public int deleteStudent(int id);
+	Account updateAccount(Account account);
 	
 	public Account findAccountById(int id);
 	

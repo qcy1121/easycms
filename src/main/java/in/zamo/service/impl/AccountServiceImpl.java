@@ -25,7 +25,7 @@ public class AccountServiceImpl implements AccountService{
 	}
 
 	@Override
-	public int deleteStudent(int id) {
+	public int deleteAccount(int id) {
 		return accountMapper.deleteAccount(id);
 	}
 
@@ -42,6 +42,12 @@ public class AccountServiceImpl implements AccountService{
 	@Override
 	public List<Account> findAccountAll() {
 		return accountMapper.findAccountAll();
+	}
+
+	@Override
+	public Account updateAccount(Account account) {
+		accountMapper.updateAccount(account);
+		return account;	
 	}
 
 }

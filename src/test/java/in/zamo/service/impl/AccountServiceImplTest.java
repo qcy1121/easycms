@@ -10,15 +10,20 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.AbstractTransactionalJUnit4SpringContextTests;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.test.context.transaction.TransactionConfiguration;
+import org.springframework.transaction.annotation.Transactional;
+//import org.slf4j.Logger;
+//import org.slf4j.LoggerFactory;
 
-
+@Transactional
+@TransactionConfiguration(defaultRollback = true)
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = {"classpath*:applicationContext.xml"})
-public class AccountServiceImplTest{
+public class AccountServiceImplTest extends AbstractTransactionalJUnit4SpringContextTests{
 
-/*	@Resource(name="accountServiceImpl")
-	private AccountService accountService;*/
+  	//private static Logger logger = LoggerFactory.getLogger(AccountServiceImplTest.class);
 	
 	@Autowired
 	private AccountService accountService;
@@ -50,7 +55,7 @@ public class AccountServiceImplTest{
 
 	@Test
 	public void testDeleteStudent() {
-		int deleted = accountService.deleteStudent(3);
+		int deleted = accountService.deleteAccount(3);
 		System.err.println("deleteStudent:"+deleted);
 	}
 

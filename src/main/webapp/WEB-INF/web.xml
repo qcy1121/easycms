@@ -9,7 +9,7 @@
 	<!-- 配置Spring中央控制器 -->
 	<servlet>
 		<servlet-name>dispatcher</servlet-name>
-		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<servlet-class>in.zamo.filter.MyDispatcherServlet</servlet-class>
 		<!--指定spring配置文件的位置 -->
 		<init-param>
       		<param-name>contextConfigLocation</param-name>
@@ -27,6 +27,8 @@
 	<servlet>
 		<servlet-name>jersey-serlvet</servlet-name>
 		<servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>	
+	      	<param-name>javax.ws.rs.Application</param-name>
+	      	<param-value>in.zamo.api.MyApplication</param-value>
 		<load-on-startup>2</load-on-startup>
 	</servlet>
  	<!-- jersey 中央控制器的映射 -->
@@ -48,14 +50,19 @@
 
 	<filter>
 		<filter-name>sitemesh</filter-name>
-		<filter-class>org.sitemesh.config.ConfigurableSiteMeshFilter</filter-class>
+		<filter-class>in.zamo.filter.MyConfigurableSiteMeshFilter</filter-class>
+		<init-param>
+      		<param-name>configFile</param-name>
+      		<param-value>classpath:applicationContext.xml</param-value>
+    	</init-param>
 	</filter>
 
 	<filter-mapping>
 		<filter-name>sitemesh</filter-name>
 		<url-pattern>/*</url-pattern>
+        <!-- <dispatcher>ERROR</dispatcher>
+        <dispatcher>FORWARD</dispatcher> -->
 	</filter-mapping>
-
 	<!-- 设置编码过滤器 -->
 	<filter>
 		<filter-name>characterEncodingFilter</filter-name>

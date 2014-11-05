@@ -32,13 +32,13 @@ public class Install {
 		Install install = new Install();
 		install.welcome();
 		for (int i = 1; i <= 10; i++) {
-			if (install.importData()) {
+			//if (install.importData()) {
 				System.out.println("\n\n安装成功，使用 mvn jetty:run 运行系统。\n\n");
-				break;
-			} else {
-				System.out.println("第" + i + "/10 安装失败，请根据错误提示检测 "
-						+ CMS_PROPERTIES + " 相关数据库的配置是否正常。");
-			}
+			//	break;
+			//} else {
+			//	System.out.println("第" + i + "/10 安装失败，请根据错误提示检测 "
+			//			+ CMS_PROPERTIES + " 相关数据库的配置是否正常。");
+			//}
 		}
 	}
 
@@ -78,10 +78,11 @@ public class Install {
 					new FileInputStream(CMS_PROPERTIES));
 			Properties props = new Properties();
 			props.load(bis);
-			String url = props.getProperty("jdbc.url");
-			String driver = props.getProperty("jdbc.driverClass");
-			String username = props.getProperty("jdbc.username");
-			String password = props.getProperty("jdbc.password");
+			String url = props.getProperty("mysql.jdbc.url");
+			String driver = props.getProperty("mysql.jdbc.driverClassName");
+			String username = props.getProperty("mysql.jdbc.username");
+			String password = props.getProperty("mysql.jdbc.password");
+			
 			Class.forName(driver).newInstance();
 			conn = (Connection) DriverManager.getConnection(url, username,
 					password);
